@@ -1,0 +1,19 @@
+.bottom-level-nav-list {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+}
+.bottom-level-nav-link {
+    text-decoration: none;
+    color: black;
+}
+.bottom-level-nav-item {
+   cursor: pointer;
+    white-space: nowrap;
+    border-radius: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.65rem;
+}

@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './Components/Views/Homepage';
+import NavbarContent from './Components/Organisms/NavbarContent/NavbarContent';
+import { useContext } from 'react';
+import { MainContext } from './Context/MainContext';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+     const { matches } = useContext(MainContext);
+    return (
+       
+            <div
+                style={{
+                    paddingRight: matches ? '24px' : '10px',
+                    paddingLeft: matches ? '24px' : null,
+                    marginRight: matches ? 'auto' : null,
+                    marginLeft: matches ? 'auto' : null,
+                    maxWidth: matches ? '1440px' : null,
+                }}
+            >
+                <NavbarContent />
+                <Routes>
+                    <Route path='/' element={<HomePage />} />
+                </Routes>
+            </div>
+    );
 }
 
 export default App;

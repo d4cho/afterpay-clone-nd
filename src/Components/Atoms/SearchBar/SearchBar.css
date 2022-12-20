@@ -1,0 +1,10 @@
+.search-field {
+    border: none;
+}
+.search-field::placeholder {
+    color: black;
+}
+
+.search-field:hover {
+    border: 1px solid black;
+}
