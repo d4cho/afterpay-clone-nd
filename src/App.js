@@ -4,7 +4,6 @@ import HomePage from './Components/Views/Homepage';
 import NavbarContent from './Components/Organisms/NavbarContent/NavbarContent';
 import { useState, useEffect } from 'react';
 
-
 function App() {
     const [matches, setMatches] = useState(window.matchMedia('(min-width: 1020px)').matches);
 
@@ -17,8 +16,7 @@ function App() {
     return (
         <div
             style={{
-                width: '100%',
-                paddingRight: matches ? '24px' : null,
+                paddingRight: matches ? '24px' : '10px',
                 paddingLeft: matches ? '24px' : null,
                 marginRight: matches ? 'auto' : null,
                 marginLeft: matches ? 'auto' : null,

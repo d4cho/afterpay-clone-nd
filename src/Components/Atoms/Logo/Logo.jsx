@@ -1,16 +1,13 @@
 import React from 'react';
 import './Logo.css';
 
-function Logo({ height, width, src, position, right }) {
+function Logo({ width, src }) {
     return (
-        <a href='/'>
-            <img
-                style={{ width: width, height: height , position: position, right: right}}
-                className='header-logo-img'
-                src={src}
-                alt=''
-            />
-        </a>
+        <>
+            <svg style={{width: width}} role='img' aria-hidden='true' height='100%' viewBox='0 0 108 20'>
+                <path d={src}></path>
+            </svg>
+        </>
     );
 }
 

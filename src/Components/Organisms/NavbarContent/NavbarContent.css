@@ -5,6 +5,11 @@
     max-width: 1220px;
     padding-right: 7.5rem;
 }
+@media screen and (max-width: 1200px) {
+    .nav-bar-wrapper {
+        max-width: 900px !important;
+    }
+}
 
 .nav-bar-border {
     border-radius: 1.2rem;
@@ -19,7 +24,7 @@
 .nav-bar-container {
     display: flex;
     align-items: center;
-    background-color: rgb(118, 236, 225);
+    background-color: rgb(178 252 228);
     border-radius: 9px;
     padding: 13px;
 }
