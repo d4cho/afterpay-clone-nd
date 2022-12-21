@@ -1,4 +1,4 @@
-import React, { useState,Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 import './NavbarContent.css';
 import Navigation from '../../Molecules/Navigation/Navigation';
 import { navbarLabels } from '../../../Utils/NavbarLabel';
@@ -10,11 +10,14 @@ import { menClothingLabels } from '../../../Utils/NavbarLabel';
 import { beautyClothingLabels } from '../../../Utils/NavbarLabel';
 import { shoesLabels } from '../../../Utils/NavbarLabel';
 import { internationalClothsLabels } from '../../../Utils/NavbarLabel';
+import { useContext } from 'react';
+import { MainContext } from '../../../Context/MainContext';
 
 function NavbarContent() {
     const [isHovering, setIsHovering] = useState(false);
     const [label, setLabel] = useState('');
-    
+    const {open } = useContext(MainContext);
+
     const renderSelectedView = (label) => {
         switch (label) {
             case 'All Categories':
@@ -75,7 +78,7 @@ function NavbarContent() {
                 );
 
             default:
-                return null
+                return null;
         }
     };
 
@@ -108,6 +111,31 @@ function NavbarContent() {
                 />
                 {isHovering ? renderSelectedView(label) : null}
             </div>
+            {/* pop up navbar adds to the main nav */}
+            {open ? null : (
+                <div className='bottom-nav-mobile'>
+                    <div className='bottom-nav-mobile-content'>
+                        <ul>
+                            <li>All Categories</li>
+                            <li>Most Popular</li>
+                            <li>New</li>
+                            <li>Shop Local</li>
+                            <li>International Brands</li>
+                        </ul>
+                        {/* dotted line */}
+                        <div className='dotted-line' />
+                        {/*  container for links */}
+                        <div>
+                            {/* footer nav */}
+                            <div>
+                                <a
+                                    href='/'
+                                >about us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

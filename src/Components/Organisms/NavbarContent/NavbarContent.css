@@ -85,3 +85,24 @@
 .dropdown-label-item:hover {
     background-color: rgb(178 252 228);
 }
+
+.bottom-nav-mobile {
+    position: fixed;
+    width: 96%;
+    /* bottom: 0;
+    top: 100%;
+    left: 0.5rem;
+    right: 0.5rem;
+    overflow-y: auto;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.5s; */
+}
+.bottom-nav-mobile-content {
+    border-radius: 9px;
+    background-color: rgb(178 252 228);
+    padding: 1rem;
+}
+.dotted-line {
+    border-bottom: dashed black;
+}

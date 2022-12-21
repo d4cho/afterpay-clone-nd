@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import { MainContext } from './Context/MainContext';
 
 function App() {
-    const { matches} = useContext(MainContext);
+    const { matches } = useContext(MainContext);
     return (
         <div
             style={{
@@ -17,7 +17,7 @@ function App() {
                 maxWidth: matches ? '1440px' : null,
             }}
         >
-            <NavbarContent/>
+            <NavbarContent />
             <Routes>
                 <Route path='/' element={<HomePage />} />
             </Routes>
