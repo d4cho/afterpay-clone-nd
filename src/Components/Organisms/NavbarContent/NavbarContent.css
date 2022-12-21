@@ -55,3 +55,33 @@
         width: 96% !important;
     }
 }
+
+.dropdown-labels-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.dropdown-labels {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    width: 16.666667%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.dropdown-label-item {
+    cursor: pointer;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 4px;
+}
+.dropdown-label-item:hover {
+    background-color: rgb(178 252 228);
+}

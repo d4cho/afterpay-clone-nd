@@ -1,20 +1,112 @@
-import React from 'react';
+import React, { useState,Fragment } from 'react';
 import './NavbarContent.css';
 import Navigation from '../../Molecules/Navigation/Navigation';
 import { navbarLabels } from '../../../Utils/NavbarLabel';
 import SearchBarAndLinks from '../../Molecules/SearchBarAndLinks/SearchBarAndLinks';
 import BottomLevelNavigation from '../../Molecules/BottomLevelNavigation/BottomLevelNavigation';
 import { dropdownNavbarLabels } from '../../../Utils/NavbarLabel';
+import { womenClothingLabels } from '../../../Utils/NavbarLabel';
+import { menClothingLabels } from '../../../Utils/NavbarLabel';
+import { beautyClothingLabels } from '../../../Utils/NavbarLabel';
+import { shoesLabels } from '../../../Utils/NavbarLabel';
+import { internationalClothsLabels } from '../../../Utils/NavbarLabel';
 
 function NavbarContent() {
+    const [isHovering, setIsHovering] = useState(false);
+    const [label, setLabel] = useState('');
+    
+    const renderSelectedView = (label) => {
+        switch (label) {
+            case 'All Categories':
+                return (
+                    <div className='dropdown-labels-container'>
+                        <ul className='dropdown-labels'>
+                            {womenClothingLabels.map((item, id) => {
+                                return (
+                                    <Fragment key={id}>
+                                        <li className='dropdown-label-item'>{item.title}</li>
+                                    </Fragment>
+                                );
+                            })}
+                        </ul>
+                        <ul className='dropdown-labels'>
+                            {menClothingLabels.map((item, id) => {
+                                return (
+                                    <Fragment key={id}>
+                                        <li className='dropdown-label-item'>{item.title}</li>
+                                    </Fragment>
+                                );
+                            })}
+                        </ul>
+                        <ul className='dropdown-labels'>
+                            {beautyClothingLabels.map((item, id) => {
+                                return (
+                                    <Fragment key={id}>
+                                        <li className='dropdown-label-item'>{item.title}</li>
+                                    </Fragment>
+                                );
+                            })}
+                        </ul>
+                        <ul className='dropdown-labels'>
+                            {shoesLabels.map((item, id) => {
+                                return (
+                                    <Fragment key={id}>
+                                        <li className='dropdown-label-item'>{item.title}</li>
+                                    </Fragment>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                );
+
+            case 'International Brands':
+                return (
+                    <div className='dropdown-labels-container'>
+                        <ul className='dropdown-labels'>
+                            {internationalClothsLabels.map((item, id) => {
+                                return (
+                                    <Fragment key={id}>
+                                        <li className='dropdown-label-item'>{item.title}</li>
+                                    </Fragment>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                );
+
+            default:
+                return null
+        }
+    };
+
+    const handleMouseOver = (menuLabel) => {
+        if (menuLabel === 'All Categories') {
+            setLabel('All Categories');
+            setIsHovering(true);
+        } else if (menuLabel === 'International Brands') {
+            setLabel('International Brands');
+            setIsHovering(true);
+        }
+    };
+
+    const handleMouseOut = (menuLabel) => {
+        if (menuLabel) {
+            setIsHovering(false);
+        }
+    };
+
     return (
-        <div className='nav-bar-wrapper'>
+        <div onMouseLeave={() => handleMouseOut(label)} className='nav-bar-wrapper'>
             <div className='nav-bar-border'>
                 <div className='nav-bar-container'>
                     <Navigation navbarLabels={navbarLabels} />
                     <SearchBarAndLinks />
                 </div>
-                <BottomLevelNavigation dropdownNavbarLabels={dropdownNavbarLabels} />
+                <BottomLevelNavigation
+                    dropdownNavbarLabels={dropdownNavbarLabels}
+                    handleMouseOver={handleMouseOver}
+                />
+                {isHovering ? renderSelectedView(label) : null}
             </div>
         </div>
     );
