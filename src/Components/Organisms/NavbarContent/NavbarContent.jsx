@@ -12,11 +12,23 @@ import { shoesLabels } from '../../../Utils/NavbarLabel';
 import { internationalClothsLabels } from '../../../Utils/NavbarLabel';
 import { useContext } from 'react';
 import { MainContext } from '../../../Context/MainContext';
+import { navDropdownLabels } from '../../../Utils/NavbarLabel';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 function NavbarContent() {
     const [isHovering, setIsHovering] = useState(false);
     const [label, setLabel] = useState('');
-    const {open } = useContext(MainContext);
+    const { open } = useContext(MainContext);
+
+     const [clicked, setClicked] = useState('0');
+
+     const handleToggle = (index) => {
+         if (clicked === index) {
+             return setClicked('0');
+         }
+         setClicked(index);
+     };
 
     const renderSelectedView = (label) => {
         switch (label) {
@@ -111,16 +123,50 @@ function NavbarContent() {
                 />
                 {isHovering ? renderSelectedView(label) : null}
             </div>
-            {/* pop up navbar adds to the main nav */}
+            {/* going to add animation and toggle */}
             {open ? null : (
                 <div className='bottom-nav-mobile'>
                     <div className='bottom-nav-mobile-content'>
                         <ul>
-                            <li>All Categories</li>
-                            <li>Most Popular</li>
-                            <li>New</li>
-                            <li>Shop Local</li>
-                            <li>International Brands</li>
+                            {navDropdownLabels.map((navItem, id) => {
+                                return (
+                                    <Fragment key={id}>
+                                        <li
+                                            onClick={() => handleToggle(id)}
+                                            style={{
+                                                fontWeight:
+                                                    navItem.mainLabel.mainLabelName ===
+                                                    'All Categories'
+                                                        ? '700'
+                                                        : null,
+                                            }}
+                                            className='dropdown-label-item'
+                                        >
+                                            {navItem.mainLabel.mainLabelName}
+                                            {clicked === id ? (
+                                                <ExpandMoreIcon />
+                                            ) : (
+                                                <ChevronRightIcon />
+                                            )}
+                                        </li>
+                                        {clicked === id ? (
+                                            <ul>
+                                                {navItem.mainLabel.subTitle?.map((name, id) => (
+                                                    <Fragment key={id}>
+                                                        {name.links.map((link, id) => (
+                                                            <Fragment key={id}>
+                                                                <li className='dropdown-label-item'>
+                                                                    {link}
+                                                                </li>
+                                                            </Fragment>
+                                                        ))}
+                                                    </Fragment>
+                                                ))}
+                                            </ul>
+                                        ) : null}
+                                    </Fragment>
+                                );
+                            })}
                         </ul>
                         {/* dotted line */}
                         <div className='dotted-line' />
@@ -128,9 +174,7 @@ function NavbarContent() {
                         <div>
                             {/* footer nav */}
                             <div>
-                                <a
-                                    href='/'
-                                >about us</a>
+                                <a href='/'>about us</a>
                             </div>
                         </div>
                     </div>

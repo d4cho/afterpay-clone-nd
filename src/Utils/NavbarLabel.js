@@ -45,3 +45,59 @@ export const internationalClothsLabels = [
     { title: 'Home' },
     { title: 'Kids' },
 ];
+
+export const navDropdownLabels = [
+    {
+        id: 1,
+        mainLabel: {
+            mainLabelName: 'All Categories',
+            subTitle: [
+                {
+                    links: [
+                        'Women',
+                        'Clothing',
+                        'Shoes',
+                        'Handbags',
+                        'Jewellery & Accessories',
+                        'Plus-Sizes',
+                        'Intimates',
+                        'Men',
+                        'Clothing',
+                        'Shoes',
+                        'Beauty',
+                        'makeup',
+                        'Skincare',
+                        'Fragrance',
+                        'Self-Care',
+                        'Shoes',
+                        'Fitness & Wellness',
+                        'Home',
+                        'Kids',
+                    ],
+                },
+            ],
+        },
+    },
+    {
+        mainLabel: { mainLabelName: 'Most Popular' },
+    },
+    {
+        mainLabel: { mainLabelName: 'New' },
+    },
+
+    {
+        mainLabel: { mainLabelName: 'Shop Local' },
+    },
+
+    {
+        id: 2,
+        mainLabel: {
+            mainLabelName: 'International Brands',
+            subTitle: [
+                {
+                    links: ['Shop US Brands', 'Shop Australian Brands', 'Shop UK Brands'],
+                },
+            ],
+        },
+    },
+];

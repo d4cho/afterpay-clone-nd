@@ -81,6 +81,10 @@
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 4px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .dropdown-label-item:hover {
     background-color: rgb(178 252 228);
@@ -89,6 +93,8 @@
 .bottom-nav-mobile {
     position: fixed;
     width: 96%;
+    top: 58px;
+    z-index: 100;
     /* bottom: 0;
     top: 100%;
     left: 0.5rem;
@@ -105,4 +111,10 @@
 }
 .dotted-line {
     border-bottom: dashed black;
+}
+
+@media screen and (min-width: 1021.8px) {
+    .bottom-nav-mobile {
+        display: none;
+    }
 }
