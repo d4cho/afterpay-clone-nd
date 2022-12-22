@@ -1,3 +1,6 @@
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+
 export const navbarLabels = [
     { title: 'How it Works', href: '/' },
     { title: 'For Retailers', href: '/' },
@@ -76,6 +79,8 @@ export const navDropdownLabels = [
         id: 1,
         mainLabel: {
             mainLabelName: 'All Categories',
+            iconOpen: <ExpandMoreIcon />,
+            iconClose: <ChevronRightIcon />,
             subTitle: [
                 {
                     links: [
@@ -118,6 +123,8 @@ export const navDropdownLabels = [
         id: 2,
         mainLabel: {
             mainLabelName: 'International Brands',
+            iconOpen: <ExpandMoreIcon />,
+            iconClose: <ChevronRightIcon />,
             subTitle: [
                 {
                     links: ['Shop US Brands', 'Shop Australian Brands', 'Shop UK Brands'],
