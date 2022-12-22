@@ -10,10 +10,21 @@
     color: black;
 }
 .bottom-level-nav-item {
-   cursor: pointer;
+    cursor: pointer;
     white-space: nowrap;
     border-radius: 0.75rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     font-size: 0.65rem;
+    padding: 10px;
+}
+
+.bottom-level-nav-item:hover {
+    background-color: rgb(178 252 228);
+}
+
+@media screen and (max-width: 1080px) {
+    .bottom-level-nav-list {
+        display: none;
+    }
 }
