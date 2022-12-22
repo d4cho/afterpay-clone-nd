@@ -5,45 +5,70 @@ export const navbarLabels = [
 ];
 
 export const dropdownNavbarLabels = [
-    { title: 'All Categories', fontWeight: '700', href: '/' },
+    { title: 'All Categories', fontWeight: '700' },
     { title: 'Most Popular', fontWeight: '700', href: '/' },
     { title: 'New', fontWeight: '700', href: '/' },
     { title: 'Shop Local' },
     { title: 'International Brands', fontWeight: '700', href: '/' },
 ];
 
-export const womenClothingLabels = [
-    { title: 'Women' },
-    { title: 'Clothing' },
-    { title: 'Shoes' },
-    { title: 'Handbags' },
-    { title: 'Jewellery & Accessories' },
-    { title: 'Plus-Sizes' },
-    { title: 'Intimates' },
-];
+export const allCategoriesDropdownLabels = [
+    {
+        id: 1,
+        mainLabel: {
+            subTitle: [
+                {
+                    links: [
+                        'Women',
+                        'Clothing',
+                        'Shoes',
+                        'Handbags',
+                        'Jewellery & Accessories',
+                        'Plus-Sizes',
+                        'Intimates',
+                    ],
+                },
+            ],
+        },
+    },
 
-export const menClothingLabels = [{ title: 'Men' }, { title: 'Clothing' }, { title: 'Shoes' }];
+    {
+        id: 2,
+        mainLabel: {
+            subTitle: [
+                {
+                    links: ['Men', 'Clothing', 'Shoes'],
+                },
+            ],
+        },
+    },
+    {
+        id: 3,
+        mainLabel: {
+            subTitle: [
+                {
+                    links: ['Beauty', 'makeup', 'Skincare', 'Fragrance', 'Self-Care'],
+                },
+            ],
+        },
+    },
 
-export const beautyClothingLabels = [
-    { title: 'Beauty' },
-    { title: 'Makeup' },
-    { title: 'Skincare' },
-    { title: 'Fragrance' },
-    { title: 'Self-Care' },
-];
-
-export const shoesLabels = [
-    { title: 'Shoes' },
-    { title: 'Fitness & Wellness' },
-    { title: 'Home' },
-    { title: 'Kids' },
+    {
+        id: 4,
+        mainLabel: {
+            subTitle: [
+                {
+                    links: ['Shoes', 'Fitness & Wellness', 'Home', 'Kids'],
+                },
+            ],
+        },
+    },
 ];
 
 export const internationalClothsLabels = [
-    { title: 'Shoes' },
-    { title: 'Fitness & Wellness' },
-    { title: 'Home' },
-    { title: 'Kids' },
+    { title: 'Shop US Brands' },
+    { title: 'Shop Australian Brands' },
+    { title: 'Shop UK Brands' },
 ];
 
 export const navDropdownLabels = [
@@ -100,4 +125,20 @@ export const navDropdownLabels = [
             ],
         },
     },
+];
+
+export const footerDropdownNavbarLabels = [
+    'About us',
+    'for retailers',
+    'Media',
+    'Terms',
+    'Contact',
+    'Afterpay API',
+    'Careers',
+    'How it works',
+    'Investors',
+    'Privacy',
+    'Instalment Agreement',
+    'Help',
+    'Security',
 ];

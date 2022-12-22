@@ -5,7 +5,7 @@ function Logo({ width, src, marginLeft }) {
     return (
         <>
             <svg
-                style={{ width: width , marginLeft: marginLeft}}
+                style={{ width: width, marginLeft: marginLeft}}
                 role='img'
                 aria-hidden='true'
                 height='100%'

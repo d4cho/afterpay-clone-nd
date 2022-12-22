@@ -7,6 +7,7 @@ function MainContextProvider(props) {
     const [isHovering, setIsHovering] = useState(false);
     const [label, setLabel] = useState('');
     const [open, setOpen] = useState(false);
+ 
 
     const handleMouseOut = (menuLabel) => {
         if (menuLabel) {
@@ -23,6 +24,8 @@ function MainContextProvider(props) {
      const toggleNavbar = () => {
          setOpen(!open);
      };
+    
+    
 
     return (
         <MainContext.Provider
