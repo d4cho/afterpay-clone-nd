@@ -9,8 +9,6 @@ import { internationalClothsLabels } from '../../../Utils/NavbarLabel';
 import { useContext } from 'react';
 import { MainContext } from '../../../Context/MainContext';
 import { navDropdownLabels } from '../../../Utils/NavbarLabel';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { footerDropdownNavbarLabels } from '../../../Utils/NavbarLabel';
 import Logo from '../../Atoms/Logo/Logo';
 import { allCategoriesDropdownLabels } from '../../../Utils/NavbarLabel';
@@ -28,73 +26,65 @@ function NavbarContent() {
         setClicked(index);
     };
 
-     const handleMouseOver = (menuLabel) => {
-         if (menuLabel === 'All Categories') {
-             setLabel('All Categories');
-             setIsHovering(true);
-         } else if (menuLabel === 'International Brands') {
-             setLabel('International Brands');
-             setIsHovering(true);
-         }
-     };
-
-     const handleMouseOut = (menuLabel) => {
-         if (menuLabel) {
-             setIsHovering(false);
-         }
-     };
-
-    const renderSelectedView = (label) => {
-        switch (label) {
-            case 'All Categories':
-                return (
-                    <div className='dropdown-labels-container'>
-                        {allCategoriesDropdownLabels.map((navItem, id) => {
-                            return (
-                                <Fragment key={id}>
-                                    <ul className='dropdown-labels'>
-                                        {navItem.mainLabel.subTitle?.map((name, id) => (
-                                            <Fragment key={id}>
-                                                {name.links.map((link, id) => (
-                                                    <Fragment key={id}>
-                                                        <li className='dropdown-label-item'>
-                                                            {link}
-                                                        </li>
-                                                    </Fragment>
-                                                ))}
-                                            </Fragment>
-                                        ))}
-                                    </ul>
-                                </Fragment>
-                            );
-                        })}
-                    </div>
-                );
-
-            case 'International Brands':
-                return (
-                    <div className='dropdown-labels-container'>
-                        <ul className='dropdown-labels'>
-                            {internationalClothsLabels.map((item, id) => {
-                                return (
-                                    <Fragment key={id}>
-                                        <li className='dropdown-label-item'>{item.title}</li>
-                                    </Fragment>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                );
-
-            default:
-                return null;
+    const handleMouseOver = (menuLabel) => {
+        if (menuLabel === 'All Categories') {
+            setLabel('All Categories');
+            setIsHovering(true);
+        } else if (menuLabel === 'International Brands') {
+            setLabel('International Brands');
+            setIsHovering(true);
         }
     };
 
-     let navMobileClass = 'bottom-nav-mobile';
-     if (open) {
-         navMobileClass = 'bottom-nav-mobile open';
-     }
+    const handleMouseOut = (menuLabel) => {
+        if (menuLabel) {
+            setIsHovering(false);
+        }
+    };
+
+    const renderSelectedView = (label) => {
+        if (label === 'All Categories') {
+            return (
+                <div className='dropdown-labels-container'>
+                    {allCategoriesDropdownLabels.map((navItem, id) => {
+                        return (
+                            <Fragment key={id}>
+                                <ul className='dropdown-labels'>
+                                    {navItem.mainLabel.subTitle?.map((name, id) => (
+                                        <Fragment key={id}>
+                                            {name.links.map((link, id) => (
+                                                <Fragment key={id}>
+                                                    <li className='dropdown-label-item'>{link}</li>
+                                                </Fragment>
+                                            ))}
+                                        </Fragment>
+                                    ))}
+                                </ul>
+                            </Fragment>
+                        );
+                    })}
+                </div>
+            );
+        } else if (label === 'International Brands')
+            return (
+                <div className='dropdown-labels-container'>
+                    <ul className='dropdown-labels'>
+                        {internationalClothsLabels.map((item, id) => {
+                            return (
+                                <Fragment key={id}>
+                                    <li className='dropdown-label-item'>{item.title}</li>
+                                </Fragment>
+                            );
+                        })}
+                    </ul>
+                </div>
+            );
+    };
+
+    let navMobileClass = 'bottom-nav-mobile';
+    if (open) {
+        navMobileClass = 'bottom-nav-mobile open';
+    }
     return (
         <div onMouseLeave={() => handleMouseOut(label)} className='nav-bar-wrapper'>
             <div className='nav-bar-border'>
@@ -108,7 +98,7 @@ function NavbarContent() {
                 />
                 {isHovering ? renderSelectedView(label) : null}
             </div>
-        
+
             <div className={navMobileClass}>
                 <div className='bottom-nav-mobile-content'>
                     <ul className='bottom-nav-mobile-content'>
@@ -126,7 +116,9 @@ function NavbarContent() {
                                         className='dropdown-label-item'
                                     >
                                         {navItem.mainLabel.mainLabelName}
-                                        {clicked === navItem.id ? <ExpandMoreIcon /> : <ChevronRightIcon />}
+                                        {clicked === navItem.id
+                                            ? navItem.mainLabel.iconOpen
+                                            : navItem.mainLabel.iconClose}
                                     </li>
                                     {clicked === navItem.id ? (
                                         <ul style={{ padding: '0px' }}>
