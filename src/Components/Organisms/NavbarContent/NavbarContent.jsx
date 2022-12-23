@@ -9,8 +9,6 @@ import { internationalClothsLabels } from '../../../Utils/NavbarLabel';
 import { useContext } from 'react';
 import { MainContext } from '../../../Context/MainContext';
 import { navDropdownLabels } from '../../../Utils/NavbarLabel';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { footerDropdownNavbarLabels } from '../../../Utils/NavbarLabel';
 import Logo from '../../Atoms/Logo/Logo';
 import { allCategoriesDropdownLabels } from '../../../Utils/NavbarLabel';

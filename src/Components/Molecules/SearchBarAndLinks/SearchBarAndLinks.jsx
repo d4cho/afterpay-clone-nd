@@ -10,24 +10,26 @@ function SearchBarAndLinks() {
     const { matches } = useContext(MainContext);
     return (
         <>
-            <SearchBar
-                backgroundColor='white'
-                borderRadius='0.75rem'
-                padding='16px'
-                placeHolder='Search brands, products and stores'
-                icon={
-                    <SearchOutlinedIcon
-                        style={{
-                            height: '20px',
-                            width: '17.50px',
-                            position: 'relative',
-                            top: '1px',
-                            left: '25px',
-                        }}
+            <div className='navigation_searchInputContainer'>
+                <div className='search-bar_searchBarWrapper_'>
+                    <SearchBar
+                        backgroundColor='white'
+                        borderRadius='0.75rem'
+                        padding='16px'
+                        placeHolder='Search brands, products and stores'
+                        icon={
+                            <SearchOutlinedIcon
+                                style={{
+                                    height: '20px',
+                                    position: 'absolute',
+                                    top: '9px',
+                                    left: '10px',
+                                }}
+                            />
+                        }
                     />
-                }
-                width={matches ? '35%' : '100%'}
-            />
+                </div>
+            </div>
 
             <div className='parent-container-links'>
                 <Link title={matches ? 'Login' : <AccountCircleIcon />} fontWeight='600' />
