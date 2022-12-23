@@ -1,13 +1,7 @@
 .nav-bar-wrapper {
     position: fixed;
     z-index: 10;
-    max-width: 1440px;
     padding-right: 7.5rem;
-}
-@media screen and (max-width: 1200px) {
-    .nav-bar-wrapper {
-        max-width: 1100px !important;
-    }
 }
 
 .nav-bar-border {
@@ -40,16 +34,11 @@
         padding-bottom: 0 !important;
         border: none;
     }
-    .nav-bar-wrapper {
-        margin-left: 20px;
-        margin-right: 20px;
-        width: 90% !important;
-    }
 }
 
 @media screen and (max-width: 1230px) {
     .nav-bar-wrapper {
-        margin-left: 5px;
+        margin-left: 12px;
         margin-right: 5px;
         width: 96% !important;
     }

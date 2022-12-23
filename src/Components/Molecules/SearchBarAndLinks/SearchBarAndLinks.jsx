@@ -27,6 +27,7 @@ function SearchBarAndLinks() {
                                 }}
                             />
                         }
+                        width={matches ? '380px' : '100%'}
                     />
                 </div>
             </div>
