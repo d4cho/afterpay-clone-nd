@@ -1,9 +1,11 @@
 import React from 'react';
+import Carousel from '../Organisms/Carousel/Carousel';
 
 function HomePage() {
     return (
         <>
-            <h1 style={{ paddingTop: '180px' }}>Homepage</h1>
+            <h3 style={{ paddingTop: '180px' }}>New</h3>
+            <Carousel />
         </>
     );
 }
