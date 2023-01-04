@@ -32,9 +32,10 @@
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     padding: 0.25rem 0.5rem;
+    gap:10px;
 }
 
-.storeTiles_storeTileOffersContainer__ShRkB {
+.product-name-storeTiles{
     margin: 0.25rem;
     display: flex;
     flex-direction: column;

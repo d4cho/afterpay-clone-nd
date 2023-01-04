@@ -12,3 +12,43 @@
     -webkit-align-items: center;
     align-items: center;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: rgb(178 252 228);
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 7px;
+}
+
+.swiper-button-next {
+    background-image: url('../src/Assets/Arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    right: 1px !important;
+    top: 85px !important;
+}
+
+.swiper-button-prev {
+    background-image: url('../src/Assets/ArrowLeft.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    left: 1px !important;
+    top: 85px !important;
+}
+
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-prev.swiper-button-disabled {
+    display: none;
+}

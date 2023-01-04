@@ -12,10 +12,15 @@ function ProductCard({ image, backgroundImage, title }) {
                     width: '195px',
                 }}
             >
-                <div class='storeTiles_storeTileOffersContainer__ShRkB'></div>
+                <div className='product-name-storeTiles'></div>
                 <div className='product-card-bottom-container'>
-                    <p class='product-card-title'>{title}</p>
-                    <img class='product-card-image' src={image} style={{ height: '25px' }} alt='' />
+                    <p className='product-card-title'>{title}</p>
+                    <img
+                        className='product-card-image'
+                        src={image}
+                        style={{ maxHeight: '2.2rem', width: '2rem', fontSize: '1.0rem' }}
+                        alt=''
+                    />
                 </div>
             </div>
         </div>
