@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React from 'react';
 import './Carousel.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ProductCard from '../../Molecules/ProductCard/ProductCard';

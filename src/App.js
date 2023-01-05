@@ -14,7 +14,7 @@ function App() {
                 paddingLeft: matches ? '20px' : null,
                 marginRight: matches ? 'auto' : null,
                 marginLeft: matches ? 'auto' : null,
-                maxWidth: matches ? '1300px' : null,
+                maxWidth: matches ? '1350px' : null,
             }}
         >
             <NavbarContent />
