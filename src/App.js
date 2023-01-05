@@ -11,10 +11,10 @@ function App() {
         <div
             style={{
                 paddingRight: matches ? '24px' : '10px',
-                paddingLeft: matches ? '24px' : null,
+                paddingLeft: matches ? '20px' : null,
                 marginRight: matches ? 'auto' : null,
                 marginLeft: matches ? 'auto' : null,
-                maxWidth: matches ? '1350px' : null,
+                maxWidth: matches ? '1300px' : null,
             }}
         >
             <NavbarContent />

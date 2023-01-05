@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProductCard.css';
 
-function ProductCard({ image, backgroundImage, title }) {
+function ProductCard({ image, backgroundImage, title, discount }) {
     return (
         <div className='product-card-parent-container'>
             <div
@@ -12,7 +12,11 @@ function ProductCard({ image, backgroundImage, title }) {
                     width: '195px',
                 }}
             >
-                <div className='product-name-storeTiles'></div>
+                <div className='product-name-storeTiles'>
+                    <span style={{ backgroundColor: 'white', fontSize: '0.76rem', width: '60px' }}>
+                        {discount}
+                    </span>
+                </div>
                 <div className='product-card-bottom-container'>
                     <p className='product-card-title'>{title}</p>
                     <img

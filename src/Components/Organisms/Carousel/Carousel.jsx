@@ -62,6 +62,7 @@ function Carousel() {
                         image={item.image}
                         backgroundImage={item.backgroundImage}
                         title={item.title}
+                        discount={item.discount}
                     />
                 ))}
             </SwiperSlide>
