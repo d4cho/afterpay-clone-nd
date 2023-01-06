@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React from 'react';
 import './Carousel.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ProductCard from '../../Molecules/ProductCard/ProductCard';
@@ -21,7 +21,6 @@ function Carousel() {
             RightButton.style.display = 'block';
         }
         if (e.realIndex === 0) {
-            console.log(e.realIndex);
             leftButton.style.display = 'none';
         } else {
             leftButton.style.display = 'block';
@@ -33,6 +32,7 @@ function Carousel() {
             navigation={true}
             modules={[Navigation]}
             className='mySwiper'
+        
         >
             <SwiperSlide>
                 {data.data.map((item, i) => (
@@ -62,6 +62,7 @@ function Carousel() {
                         image={item.image}
                         backgroundImage={item.backgroundImage}
                         title={item.title}
+                        discount={item.discount}
                     />
                 ))}
             </SwiperSlide>
