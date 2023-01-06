@@ -25,7 +25,7 @@ function HomePage() {
                 />
                 <div>
                     <a
-                        href='/'
+                        href='/new-products'
                         style={{
                             textDecoration: 'none',
                             color: 'black',

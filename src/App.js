@@ -4,6 +4,7 @@ import HomePage from './Components/Views/Homepage';
 import NavbarContent from './Components/Organisms/NavbarContent/NavbarContent';
 import { useContext } from 'react';
 import { MainContext } from './Context/MainContext';
+import NewProductsPage from './Components/Views/NewProductsPage';
 
 function App() {
     const { matches } = useContext(MainContext);
@@ -20,6 +21,9 @@ function App() {
             <NavbarContent />
             <Routes>
                 <Route path='/' element={<HomePage />} />
+            </Routes>
+            <Routes>
+                <Route path='/new-products' element={<NewProductsPage />} />
             </Routes>
         </div>
     );

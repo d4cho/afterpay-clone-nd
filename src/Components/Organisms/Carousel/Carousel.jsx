@@ -21,7 +21,6 @@ function Carousel() {
             RightButton.style.display = 'block';
         }
         if (e.realIndex === 0) {
-            console.log(e.realIndex);
             leftButton.style.display = 'none';
         } else {
             leftButton.style.display = 'block';
@@ -33,6 +32,7 @@ function Carousel() {
             navigation={true}
             modules={[Navigation]}
             className='mySwiper'
+        
         >
             <SwiperSlide>
                 {data.data.map((item, i) => (

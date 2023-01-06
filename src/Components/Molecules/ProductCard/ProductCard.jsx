@@ -9,7 +9,6 @@ function ProductCard({ image, backgroundImage, title, discount }) {
                 style={{
                     backgroundImage: `url(${backgroundImage})`,
                     height: '210px',
-                    width: '195px',
                 }}
             >
                 <div className='product-name-storeTiles'>

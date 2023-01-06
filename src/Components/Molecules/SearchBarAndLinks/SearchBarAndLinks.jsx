@@ -22,7 +22,7 @@ function SearchBarAndLinks() {
                                 style={{
                                     height: '20px',
                                     position: 'absolute',
-                                    top: '9px',
+                                    top: '12px',
                                     left: '10px',
                                 }}
                             />
