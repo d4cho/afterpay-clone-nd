@@ -15,7 +15,7 @@ function Carousel() {
     const removeButtonClasses = (e) => {
         let leftButton = document.querySelector('.swiper-button-prev');
         let RightButton = document.querySelector('.swiper-button-next');
-        if (e.realIndex === 2) {
+        if (e.realIndex === 3) {
             RightButton.style.display = 'none';
         } else {
             RightButton.style.display = 'block';
@@ -32,7 +32,6 @@ function Carousel() {
             navigation={true}
             modules={[Navigation]}
             className='mySwiper'
-        
         >
             <SwiperSlide>
                 {data.data.map((item, i) => (
@@ -63,6 +62,17 @@ function Carousel() {
                         backgroundImage={item.backgroundImage}
                         title={item.title}
                         discount={item.discount}
+                    />
+                ))}
+            </SwiperSlide>
+
+            <SwiperSlide>
+                {data.dataFour.map((item, i) => (
+                    <ProductCard
+                        key={i}
+                        image={item.image}
+                        backgroundImage={item.backgroundImage}
+                        title={item.title}
                     />
                 ))}
             </SwiperSlide>
