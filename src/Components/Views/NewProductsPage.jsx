@@ -17,6 +17,7 @@ function NewProductsPage() {
     const [sortByFilter, setSortByFilter] = useState(false);
     const [offer, setOffer] = useState(false);
     const [sortBy, setSortBy] = useState('Relevance');
+    const [borderColor, setBorderColor] = useState('1px solid black');
 
     const onClick = () => {
         setSortByFilter(true);
@@ -29,10 +30,12 @@ function NewProductsPage() {
     // filter by discount products
     const onClickOffer = () => {
         setOffer(!offer);
+        setBorderColor("1px solid black")
         if (offer) {
             setFilter(oneArrayOfProducts);
         } else {
             setFilter(discountFiltered);
+            setBorderColor('3px solid black');
         }
     };
 
@@ -41,6 +44,7 @@ function NewProductsPage() {
         if (item.includes('Relevance')) {
             if (offer) {
                 setFilter(discountFiltered);
+                 setBorderColor('');
             } else {
                 setFilter(oneArrayOfProducts);
             }
@@ -50,6 +54,7 @@ function NewProductsPage() {
             if (offer) {
                 let newSorted = discountFiltered.sort((a, b) => b.id - a.id);
                 setFilter(newSorted);
+                 setBorderColor('');
             } else {
                 const newestFiltered = oneArrayOfProducts.filter(
                     (item) => item.newest === 'Newest'
@@ -61,6 +66,7 @@ function NewProductsPage() {
         } else if (item.includes('Popular')) {
             if (offer) {
                 setFilter(discountFiltered);
+                setBorderColor('');
             } else {
                 const popularFiltered = oneArrayOfProducts.filter(
                     (item) => item.popular === 'Popular'
@@ -91,7 +97,7 @@ function NewProductsPage() {
                     paddingBottom='2px'
                     paddingLeft='20px'
                     paddingRight='20px'
-                    border={offer ? '3px solid black' : '1px solid black'}
+                    border={borderColor}
                     backgroundColor={offer ? 'rgb(178 252 228)' : ''}
                     fontSize='0.7rem'
                     onClick={onClickOffer}
