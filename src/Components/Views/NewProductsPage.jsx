@@ -20,7 +20,7 @@ function NewProductsPage() {
     const [borderColor, setBorderColor] = useState('1px solid black');
 
     const onClick = () => {
-        setSortByFilter(true);
+        setSortByFilter(!sortByFilter);
     };
 
     const discountFiltered = oneArrayOfProducts.filter(
@@ -54,7 +54,7 @@ function NewProductsPage() {
             if (offer) {
                 let newSorted = discountFiltered.sort((a, b) => b.id - a.id);
                 setFilter(newSorted);
-                 setBorderColor('');
+                setBorderColor('');
             } else {
                 const newestFiltered = oneArrayOfProducts.filter(
                     (item) => item.newest === 'Newest'
@@ -115,9 +115,15 @@ function NewProductsPage() {
                     border={sortByFilter ? '3px solid black' : '1px solid black'}
                 />
             </div>
-            {sortByFilter && (
-                <Dropdown dropdownLabel={dropdownLabels} filterTypeProducts={filterTypeProducts} />
-            )}
+            <div style={{position:'relative'}}>
+                {sortByFilter && (
+                    <Dropdown
+                        dropdownLabel={dropdownLabels}
+                        filterTypeProducts={filterTypeProducts}
+                    />
+                )}
+            </div>
+
             <ProductCardContent filter={filter} />
         </>
     );

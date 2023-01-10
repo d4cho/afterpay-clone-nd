@@ -1,5 +1,5 @@
 .dropdown-container {
-    position: relative;
+    position: absolute;
     left: 80px;
     z-index: 9999;
     margin-top: 0.5rem;
