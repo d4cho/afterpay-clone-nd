@@ -14,36 +14,61 @@ function NewProductsPage() {
     const { matches } = useContext(MainContext);
     const oneArrayOfProducts = [...data.data, ...data.dataTwo, ...data.dataThree, ...data.dataFour];
     const [filter, setFilter] = useState(oneArrayOfProducts);
-    const [open, setOpen] = useState(false);
+    const [sortByFilter, setSortByFilter] = useState(false);
     const [offer, setOffer] = useState(false);
+    const [sortBy, setSortBy] = useState('Relevance');
 
     const onClick = () => {
-        setOpen(!open);
+        setSortByFilter(true);
     };
-    
+
+    const discountFiltered = oneArrayOfProducts.filter(
+        (item) => item.discount === '30% off' || item.discount === '70% off'
+    );
+
     // filter by discount products
     const onClickOffer = () => {
         setOffer(!offer);
         if (offer) {
             setFilter(oneArrayOfProducts);
         } else {
-            const discountFiltered = oneArrayOfProducts.filter(
-                (item) => item.discount === '30% off'
-            );
             setFilter(discountFiltered);
         }
     };
 
-    // filter products
+    // filter products by label and discount if clicked on offer
     const filterTypeProducts = (item) => {
         if (item.includes('Relevance')) {
-            setFilter(oneArrayOfProducts);
+            if (offer) {
+                setFilter(discountFiltered);
+            } else {
+                setFilter(oneArrayOfProducts);
+            }
+            setSortBy('Relevance');
+            setSortByFilter(!sortByFilter);
         } else if (item.includes('Newest')) {
-            const newestFiltered = oneArrayOfProducts.filter((item) => item.newest === 'Newest');
-            setFilter(newestFiltered);
+            if (offer) {
+                let newSorted = discountFiltered.sort((a, b) => b.id - a.id);
+                setFilter(newSorted);
+            } else {
+                const newestFiltered = oneArrayOfProducts.filter(
+                    (item) => item.newest === 'Newest'
+                );
+                setFilter(newestFiltered);
+            }
+            setSortBy('Newest');
+            setSortByFilter(!sortByFilter);
         } else if (item.includes('Popular')) {
-            const popularFiltered = oneArrayOfProducts.filter((item) => item.popular === 'Popular');
-            setFilter(popularFiltered);
+            if (offer) {
+                setFilter(discountFiltered);
+            } else {
+                const popularFiltered = oneArrayOfProducts.filter(
+                    (item) => item.popular === 'Popular'
+                );
+                setFilter(popularFiltered);
+            }
+            setSortBy('Popular');
+            setSortByFilter(!sortByFilter);
         }
     };
 
@@ -72,19 +97,19 @@ function NewProductsPage() {
                     onClick={onClickOffer}
                 />
                 <FilterButton
-                    title='Sort by: Relevance'
+                    title={`Sort by:${sortBy}`}
                     borderRadius='30px'
                     paddingTop='10px'
                     paddingBottom='10px'
                     paddingLeft='10px'
                     paddingRight='10px'
                     fontSize='0.7rem'
-                    arrow={open ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+                    arrow={sortByFilter ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
                     onClick={onClick}
-                    border={open ? '3px solid black' : '1px solid black'}
+                    border={sortByFilter ? '3px solid black' : '1px solid black'}
                 />
             </div>
-            {open && (
+            {sortByFilter && (
                 <Dropdown dropdownLabel={dropdownLabels} filterTypeProducts={filterTypeProducts} />
             )}
             <ProductCardContent filter={filter} />

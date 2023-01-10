@@ -98,13 +98,16 @@
             "image": "https://site-assets.afterpay.com/media/W1siZiIsIjIwMjEvMDIvMTcvMDEvMTgvNTIvNTg1MDQxMWEtYWJkMy00MGU2LTk0OTAtOTBkYzExODk4YmU2L0ZyYWdyYW5jZU5ldFdoaXRlTG9nby5wbmciXSxbInAiLCJuZWdhdGVfbG9nbyIsIjI1MHgyNTAiXV0?sha=09d77382ccf91aed",
             "backgroundImage": "https://site-assets.afterpay.com/media/W1siZiIsIjIwMjEvMDIvMTcvMDEvMTgvNTMvN2M1MGY2MmQtNDc3OS00OGJjLWJhYTktMTczYWExZjYwMmM2LzUwMHg1MDBfbGlmZXN0eWxlICgxKS5qcGciXSxbInAiLCJzdG9yZV90aWxlIiwiMjUweDI1MCJdXQ?sha=f3d1b711b8376837",
             "newest": "Newest",
-            "discount": "30% off"
+            "discount": "30% off",
+            "popular": "Popular"
         },
         {
             "id": 15,
             "title": "Melanie Auld Jewelry",
             "image": "https://site-assets.afterpay.com/media/W1siZiIsIjIwMjEvMDUvMDgvMDYvMDIvMTUvOGI1YjUwZTQtNzIwZC00OWQ0LWIzYjUtNmE1OTYxYjZkOWQxL01BSi1Mb2dvLXgtMTNmNS0yXzkwNmM1ZDg2LWQucG5nIl0sWyJwIiwibmVnYXRlX2xvZ28iLCIyNTB4MjUwIl1d?sha=3e5a3de8e260e74b",
-            "backgroundImage": "https://site-assets.afterpay.com/media/W1siZiIsIjIwMjEvMDUvMDgvMDYvMDIvMTYvYzEwYmI2MDYtZjkxNy00YTM5LTliNDgtYWQ4YTJhNTE4NDFjL3Byb2ZpbGUtcGljX2I4OGY4MjI2LWMuanBnIl0sWyJwIiwic3RvcmVfdGlsZSIsIjI1MHgyNTAiXV0?sha=bdd03bf965c31eea"
+            "backgroundImage": "https://site-assets.afterpay.com/media/W1siZiIsIjIwMjEvMDUvMDgvMDYvMDIvMTYvYzEwYmI2MDYtZjkxNy00YTM5LTliNDgtYWQ4YTJhNTE4NDFjL3Byb2ZpbGUtcGljX2I4OGY4MjI2LWMuanBnIl0sWyJwIiwic3RvcmVfdGlsZSIsIjI1MHgyNTAiXV0?sha=bdd03bf965c31eea",
+            "newest": "Newest",
+            "discount": "70% off"
         },
         {
             "id": 16,
