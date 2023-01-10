@@ -43,7 +43,7 @@ function NewProductsPage() {
     const filterTypeProducts = (item) => {
         if (item.includes('Relevance')) {
             if (offer) {
-                setFilter(discountFiltered);
+                 setFilter(discountFiltered);
                  setBorderColor('');
             } else {
                 setFilter(oneArrayOfProducts);
@@ -86,10 +86,10 @@ function NewProductsPage() {
                 title='New'
                 fontSize='1.2rem'
                 fontWeight='800'
-                marginLeft={!matches ? '10px' : '10px'}
+                marginLeft={!matches ? '10px' : '25px'}
                 marginTop='140px'
             />
-            <div style={{ flexDirection: 'row', display: 'flex', gap: '10px' }}>
+            <div style={{ flexDirection: 'row', display: 'flex', gap: '10px' , marginLeft:'20px'}}>
                 <FilterButton
                     title='Offers'
                     borderRadius='30px'
