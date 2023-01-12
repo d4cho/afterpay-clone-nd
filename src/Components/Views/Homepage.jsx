@@ -42,7 +42,6 @@ function HomePage() {
                     </a>
                 </div>
             </div>
-
             <Carousel />
         </>
     );

@@ -7,7 +7,6 @@ import data from '../../../Data/products-data.json';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-
 // import required modules
 import { Navigation } from 'swiper';
 
@@ -32,30 +31,28 @@ function Carousel() {
             navigation={true}
             modules={[Navigation]}
             className='mySwiper'
+            slidesPerView={6}
+            breakpoints={{
+                768: {
+                    width: 768,
+                    slidesPerView: 4,
+                },
+                576: {
+                    width: 576,
+                    slidesPerView: 2,
+                },
+                300: {
+                    width: 576,
+                    slidesPerView: 2,
+                },
+                200: {
+                    width: 576,
+                    slidesPerView: 2,
+                },
+            }}
         >
-            <SwiperSlide>
-                {data.data.map((item, i) => (
-                    <ProductCard
-                        key={i}
-                        image={item.image}
-                        backgroundImage={item.backgroundImage}
-                        title={item.title}
-                    />
-                ))}
-            </SwiperSlide>
-            <SwiperSlide>
-                {data.dataTwo.map((item, i) => (
-                    <ProductCard
-                        key={i}
-                        image={item.image}
-                        backgroundImage={item.backgroundImage}
-                        title={item.title}
-                    />
-                ))}
-            </SwiperSlide>
-
-            <SwiperSlide>
-                {data.dataThree.map((item, i) => (
+            {data.data.map((item, i) => (
+                <SwiperSlide>
                     <ProductCard
                         key={i}
                         image={item.image}
@@ -63,19 +60,8 @@ function Carousel() {
                         title={item.title}
                         discount={item.discount}
                     />
-                ))}
-            </SwiperSlide>
-
-            <SwiperSlide>
-                {data.dataFour.map((item, i) => (
-                    <ProductCard
-                        key={i}
-                        image={item.image}
-                        backgroundImage={item.backgroundImage}
-                        title={item.title}
-                    />
-                ))}
-            </SwiperSlide>
+                </SwiperSlide>
+            ))}
         </Swiper>
     );
 }

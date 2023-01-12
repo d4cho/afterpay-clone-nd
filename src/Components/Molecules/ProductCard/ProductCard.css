@@ -1,15 +1,9 @@
 .product-card-parent-container {
-    box-sizing: border-box;
-    display: inline-block;
     height: 228px;
-    left: 1120px;
-    list-style-type: none;
     margin: auto 10px;
-    vertical-align: top;
-    width: 180px;
+    width: 200px;
 }
 .product-card-storeTile-Container {
-    grid-column: span 2 / span 2;
     display: flex;
     height: 14.25rem;
     width: 100%;
@@ -48,21 +42,3 @@
     font-size: 0.65rem;
     line-height: 1rem;
 }
-
-/* @media screen and (max-width: 1330px) {
-    .product-card-storeTile-Container {
-        width: 100% !important;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .product-card-storeTile-Container {
-        width: 120.5px !important;
-    }
-}
-
-@media screen and (max-width: 870px) {
-    .product-card-storeTile-Container {
-        width: 105.5px !important;
-    }
-} */

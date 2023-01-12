@@ -12,7 +12,7 @@ import { dropdownLabels } from '../../Utils/DropdownLabel';
 
 function NewProductsPage() {
     const { matches } = useContext(MainContext);
-    const oneArrayOfProducts = [...data.data, ...data.dataTwo, ...data.dataThree, ...data.dataFour];
+    const oneArrayOfProducts = [...data.data];
     const [filter, setFilter] = useState(oneArrayOfProducts);
     const [sortByFilter, setSortByFilter] = useState(false);
     const [offer, setOffer] = useState(false);
