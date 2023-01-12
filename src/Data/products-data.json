@@ -40,10 +40,7 @@
             "title": "Running Room",
             "image": "https://site-assets.afterpay.com/media/W1siZiIsIjIwMjEvMTAvMjEvMDYvMDcvMDYvMDg1ZjU2YjAtNmMzNS00MDI1LThmMzEtZjE1NDM5YjEwYjMxL1J1bm5pbmdSb29tLUFmdGVycGF5LTUwMHg1MDAtV2hpdGVMb2dvLnBuZyJdLFsicCIsIm5lZ2F0ZV9sb2dvIiwiMjUweDI1MCJdXQ?sha=25e4e22d6f9c8295",
             "backgroundImage": "https://site-assets.afterpay.com/media/W1siZiIsIjIwMjIvMTAvMjAvMjEvNDkvMTAvYzY3YjVhYjctNDA3OC00NzlhLTlkMTItZTA2NjlmNGU2ODMwL2ltYWdld2QuanBnIl0sWyJwIiwic3RvcmVfdGlsZSIsIjI1MHgyNTAiXV0?sha=29e6a93075fc66b5"
-        }
-    ],
-
-    "dataTwo": [
+        },
         {
             "id": 7,
             "title": "West Coast Kids",
@@ -82,10 +79,7 @@
             "title": "Bahhgoose",
             "image": "https://site-assets.afterpay.com/media/W1siZiIsIjIwMjEvMDIvMTgvMjIvMzAvNDUvZGM4MzNmMWUtODIyMC00N2JlLWFjN2MtZmFmNjJhYzQyNDM3L0JBSEhHT09TRS0yZmU0LWZfNzliMWEyYzgtNi5wbmciXSxbInAiLCJuZWdhdGVfbG9nbyIsIjI1MHgyNTAiXV0?sha=7c62bf4f73fda444",
             "backgroundImage": "https://site-assets.afterpay.com/media/W1siZiIsIjIwMjEvMDIvMTgvMjIvMzAvNDYvZjM1OTVlOTctY2UwZS00YjE5LWFmNzItYWUwZGY0ZjU4NDIzL3Byb2ZpbGUtcGljXzE0OWQxMjcxLTIuanBnIl0sWyJwIiwic3RvcmVfdGlsZSIsIjI1MHgyNTAiXV0?sha=a6c212f9e96d0563"
-        }
-    ],
-
-    "dataThree": [
+        },
         {
             "id": 13,
             "title": "The Hair Routine",
@@ -127,10 +121,7 @@
             "title": "Bio Seaweed Gel",
             "image": "https://site-assets.afterpay.com/media/W1siZiIsIjIwMjEvMTIvMjMvMjMvMjcvMDgvMjYyMmY4NTYtYzlmYS00MGEyLWJhMmQtNzMzNTgyOWY0NjQ3L2JzZ2xvZ28ucG5nIl0sWyJwIiwibmVnYXRlX2xvZ28iLCIyNTB4MjUwIl1d?sha=dee96dd2b538961c",
             "backgroundImage": "https://site-assets.afterpay.com/media/W1siZiIsIjIwMjEvMTIvMjMvMjMvMjcvMDkvODA2ZjBmYjgtNGYxYi00MDQ3LWE4N2UtYzYwMTk5OTllOGUwL2JzZ2ltZy5qcGciXSxbInAiLCJzdG9yZV90aWxlIiwiMjUweDI1MCJdXQ?sha=bd1ed05efcd9d130"
-        }
-    ],
-
-    "dataFour": [
+        },
         {
             "id": 19,
             "title": "Pups and Beds CA",
